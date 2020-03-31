@@ -16,6 +16,8 @@ Reflect.defineProperty(Vue, '__share_pool__', {
   },
 });
 
+console.log('vuex实例',Vue.__share_pool__)
+
 new Vue({
   router,
   store,

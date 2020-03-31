@@ -14,6 +14,10 @@ const tasks = [
     src: 'applications/app-javascript/dist',
     dest: 'docs/app-javascript',
   },
+  {
+    src: 'applications/test/dist',
+    dest: 'docs/test',
+  },
 ]
 
 fs.removeSync(path.resolve(__dirname, 'dist'))

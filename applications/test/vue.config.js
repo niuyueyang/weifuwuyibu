@@ -10,7 +10,7 @@ module.exports = {
   publicPath: `${NODE_ENV === 'development' ? '' : '.'}/${APP_NAME}/`,
 
   css: {
-    extract: false
+    extract: true
   },
 
   productionSourceMap: false,
@@ -24,16 +24,16 @@ module.exports = {
       .filename('main.js')
       .chunkFilename('js/[name].[chunkhash:8].js')
       .jsonpFunction(`webpackJsonp-${APP_NAME}`)
-      .library(`app-${APP_NAME}`)
+      .library(`${APP_NAME}`)
       .libraryExport('default')
       .libraryTarget('umd')
 
     config.optimization.splitChunks(false)
-
+    //
     config.plugin('define').use(webpack.DefinePlugin, [{
       'process.env.VUE_APP_NAME': JSON.stringify(APP_NAME)
     }])
-
+    //
     config.plugins
       .delete('html')
       .delete('preload')

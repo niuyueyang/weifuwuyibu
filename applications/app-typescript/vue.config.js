@@ -22,7 +22,7 @@ module.exports = {
 
     config.output
       .filename('main.js')
-      .chunkFilename('[name].[chunkhash:8].js')
+      .chunkFilename('js/[name].[chunkhash:8].js')
       .jsonpFunction(`webpackJsonp-${APP_NAME}`)
       .library(`app-${APP_NAME}`)
       .libraryExport('default')

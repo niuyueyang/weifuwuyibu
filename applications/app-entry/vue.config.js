@@ -8,6 +8,9 @@ const PROXY = {
   },
   '/app-javascript/': {
     target: 'http://localhost:10242/'
+  },
+  '/test/': {
+    target: 'http://localhost:10243/'
   }
 }
 

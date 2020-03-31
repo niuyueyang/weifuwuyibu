@@ -24,6 +24,7 @@ export default {
       routes: [
         { name: '/app-typescript', title: 'app-typescript' },
         { name: '/app-javascript', title: 'app-javascript' },
+        { name: '/test', title: 'test' },
       ],
     };
   },
